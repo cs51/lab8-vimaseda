@@ -140,7 +140,7 @@ listening for the event.
 ......................................................................*)
             
   let fire_event (evt : 'a event) (arg : 'a) : unit =
-    List.fold_left (fun acc x -> x.action arg) () !evt ;;
+    List.fold_left (fun _ x -> x.action arg) () !evt ;;
 
 end
   
